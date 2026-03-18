@@ -15,7 +15,7 @@ export default function SuryaGlitch() {
 
         // Return to normal very quickly to create a flash effect
         setTimeout(() => {
-          setText("Shiva");
+          setText("SB");
         }, 100 + Math.random() * 200);
       }
     }, 400);
