@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #0a0a0a;
+  --color-foreground: #e5e5e5;
+  --color-accent: #00ff9f;
+  --color-secondary-accent: #00c3ff;
+  --color-muted: #1a1a1a;
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle grid background */
+.grid-bg {
+  background-size: 40px 40px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+/* Glowing borders */
+.glow-border {
+  border: 1px solid rgba(0, 255, 159, 0.2);
+  box-shadow: 0 0 10px rgba(0, 255, 159, 0.05);
+  transition: all 0.3s ease;
+}
+.glow-border:hover {
+  border-color: rgba(0, 255, 159, 0.5);
+  box-shadow: 0 0 15px rgba(0, 255, 159, 0.2);
+}
+
+/* Cursor blink animation */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+  display: inline-block;
+  width: 8px;
+  height: 1.2em;
+  background-color: var(--color-accent);
+  vertical-align: middle;
+  margin-left: 4px;
+}
+
+/* Shimmer animation */
+@keyframes shimmer {
+  from { background-position: 200% center; }
+  to { background-position: -200% center; }
+}
+.animate-shimmer {
+  animation: shimmer 3s linear infinite;
+}
