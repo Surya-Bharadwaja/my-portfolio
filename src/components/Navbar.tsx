@@ -6,7 +6,7 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <div className="font-mono text-accent font-bold text-lg">
           <Link href="/">
-            SB<span className="cursor-blink"></span>
+            SB
           </Link>
         </div>
         <div className="hidden md:flex space-x-8 text-sm text-foreground/80 font-mono">
