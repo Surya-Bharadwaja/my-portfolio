@@ -5,11 +5,10 @@ interface ProjectCardProps {
   stack: string[];
   security: string;
   performance: string;
-  results: string;
 }
 
 export default function ProjectCard({
-  title, problem, solution, stack, security, performance, results
+  title, problem, solution, stack, security, performance
 }: ProjectCardProps) {
   return (
     <div className="glow-border bg-muted/30 p-6 md:p-8 rounded-md relative flex flex-col h-full group">
@@ -24,9 +23,6 @@ export default function ProjectCard({
         <p><strong className="text-foreground opacity-70 block mb-1">Solution:</strong> {solution}</p>
         <p><strong className="text-foreground opacity-70 block mb-1">Security:</strong> {security}</p>
         <p><strong className="text-foreground opacity-70 block mb-1">Performance:</strong> {performance}</p>
-        <div className="p-3 bg-accent/5 border border-accent/20 rounded mt-4">
-          <p><strong className="text-accent font-mono">Results:</strong> {results}</p>
-        </div>
       </div>
 
       <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-white/5">
