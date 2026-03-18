@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import ProjectCard from "@/components/ProjectCard";
 import SkillBadge from "@/components/SkillBadge";
+import BackgroundGraphics from "@/components/BackgroundGraphics";
 
 export default function Home() {
   const projects = [
@@ -51,7 +52,11 @@ export default function Home() {
   ];
 
   return (
-    <main className="min-h-screen text-foreground selection:bg-accent/20 selection:text-accent">
+    <main className="min-h-screen text-foreground selection:bg-accent/20 selection:text-accent relative">
+      <div className="fixed inset-0 grid-bg pointer-events-none -z-10">
+        <BackgroundGraphics />
+      </div>
+      
       <Navbar />
 
       <div className="max-w-4xl mx-auto px-6 pt-24 pb-20 space-y-32">
