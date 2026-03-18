@@ -12,10 +12,10 @@ export default function SuryaGlitch() {
         const binaryLength = "Surya".length;
         const binary = Array.from({ length: binaryLength }, () => (Math.random() > 0.5 ? "1" : "0")).join("");
         setText(binary);
-        
+
         // Return to normal very quickly to create a flash effect
         setTimeout(() => {
-          setText("Surya");
+          setText("Shiva");
         }, 100 + Math.random() * 200);
       }
     }, 400);
@@ -24,9 +24,9 @@ export default function SuryaGlitch() {
   }, []);
 
   return (
-    <span 
+    <span
       className="inline-block text-accent font-mono font-bold px-1 transition-all duration-75 relative"
-      style={{ 
+      style={{
         textShadow: "0 0 10px rgba(0, 255, 159, 1), 0 0 20px rgba(0, 255, 159, 0.6)",
         animation: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite"
       }}
